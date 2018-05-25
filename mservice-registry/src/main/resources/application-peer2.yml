@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: cnuip2-mservice-registry
+server:
+  port: ${port:8762}
+  tomcat:
+    uri-encoding: UTF-8
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
+    ###生产环境注意开启自我保护模式
+#  server:
+#    enable-self-preservation: false
+
